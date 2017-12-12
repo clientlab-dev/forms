@@ -1,0 +1,109 @@
+body {
+    font-family: Arial;
+    font-size: 16px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.error {
+    border-color: red;
+
+    & + span {
+        color: red;
+    }
+}
+
+a {
+    -webkit-touch-callout: none;
+}
+
+.wrap {
+    width: 480px;
+    margin: 100px auto;
+}
+
+.form {
+    .field-item {
+        position: relative;
+        padding-bottom: 20px;
+
+        & + .field-item {
+            margin-top: 30px;
+        }
+
+        input {
+            padding: 8px 15px;
+            display: block;
+            width: 100%;
+        }
+
+        .notifier {
+            position: absolute;
+            right: 0;
+            font-size: 14px;
+            bottom: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .error-notifier {
+            @extend .notifier;
+
+            color: red;
+        } //field-popup
+
+        .correct-notifier {
+            @extend .notifier;
+
+            color: green;
+        }
+
+        label {
+            position: absolute;
+            top: 8px;
+            left: 15px;
+            color: #969595;
+            font-size: 14px;
+            transition: transform 0.3s;
+        } //label
+
+        &--focused {
+            label {
+                transform: translate(-22px, -27px) scale(0.8);
+            }
+        }
+
+        &--error {
+            .error-notifier {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        &--correct {
+            .correct-notifier {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    @import "750";
+}
+
+@media screen and (max-width: 750px) {
+    @import "480";
+}
+
+@media screen and (max-width: 480px) {
+    @import "320";
+}
+
+@import "arcticmodal";
