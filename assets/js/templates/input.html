@@ -1,0 +1,12 @@
+<div  class="field-item">
+	<input v-model="value" v-bind:name="name" v-bind:id="id" v-bind:type="type" />
+	<div class="error-notifier">
+		{{errorMessage}}
+	</div>
+	<div class="correct-notifier">
+		{{correctMessage}}
+	</div>
+	<label v-bind:for="id">
+		{{placeholderText}}
+	</label>
+</div>

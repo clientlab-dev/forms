@@ -44,12 +44,12 @@
 
 <hr />
 
-<form action="" id="my_form" class="form">
-	<field-item
-	      v-for="item in fields"
-	      v-bind:todo="item"
- 
-	      v-bind:key="item.id">
-	</field-item>
+<form action="" class="form">
+	<div id="my_form"></div><!-- /#my_form -->
 </form><!-- /.form -->
 
+<hr />
+<hr />
+<form action="" class="form">
+	<div id="my_form2"></div><!-- /#my_form -->
+</form><!-- /.form -->
