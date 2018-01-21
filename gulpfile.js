@@ -82,7 +82,8 @@ gulp.task('js', function () {
 
 
 
-gulp.task('watch', ['sass', 'js', 'browserSync'], function () {
+
+gulp.task('watch', ['sass', 'js'], function () {
 	gulp.watch('assets/scss/header.scss', ['headersass']);
 	gulp.watch('assets/scss/**/*.scss', ['sass']);
 	gulp.watch('assets/js/templates/**/*', ['views:compile']);

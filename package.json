@@ -30,5 +30,6 @@
     "url": "https://github.com/clientlab/sample/issues"
   },
   "homepage": "https://github.com/clientlab/sample#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {}
 }
